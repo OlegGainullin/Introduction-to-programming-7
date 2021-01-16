@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <locale.h>
+#include <stdlib.h>
+#include <math.h>
+int main()
+{
+    char *locale = setlocale(LC_ALL, "");
+    float a1 = 0;
+    float b1 = 0;
+    float c1 = 0;
+    float a2 = 0;
+    float b2 = 0;
+    float c2 = 0;
+    float answer_x = 0;
+    float answer_y = 0;
+    printf("Введите A1: ");
+    scanf("%e", &a1);
+    printf("Введите B1: ");
+    scanf("%e", &b1);
+    printf("Введите C1: ");
+    scanf("%e", &c1);
+    printf("Введите A2: ");
+    scanf("%e", &a2);
+    printf("Введите B2: ");
+    scanf("%e", &b2);
+    printf("Введите C2: ");
+    scanf("%e", &c2);
+    answer_y = (c1*a2-c2*a1)/(b1*a2-b2*a1);
+    answer_x = (c1-b1*answer_y)/a1;
+    printf("x = %g \n", answer_x);
+    printf("y = %g", answer_y);
+    return 0;
+}

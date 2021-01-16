@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <locale.h>
+#include <stdlib.h>
+#include <math.h>
+int main()
+{
+    char *locale = setlocale(LC_ALL, "");
+    float a = 0;
+    float x = 0;
+    float y = 0;
+    float answer = 0;
+    printf("Введите A: ");
+    scanf("%e", &a);
+    printf("Введите X: ");
+    scanf("%e", &x);
+    printf("Введите Y: ");
+    scanf("%e", &y);
+    answer = a/x;
+    printf("1 кг стоит %g р \n", answer);
+    answer = answer * y;
+    printf("%g кг стоит %g р \n", y,answer);
+    return 0;
+}

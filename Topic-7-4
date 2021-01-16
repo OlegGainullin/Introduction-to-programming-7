@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <locale.h>
+#include <stdlib.h>
+#include <math.h>
+int main()
+{
+    char *locale = setlocale(LC_ALL, "");
+    float v1 = 0;
+    float v2 = 0;
+    float s = 0;
+    float t = 0;
+    float answer = 0;
+    printf("Введите v1: ");
+    scanf("%e", &v1);
+    printf("Введите v2: ");
+    scanf("%e", &v2);
+    printf("Введите s: ");
+    scanf("%e", &s);
+    printf("Введите t: ");
+    scanf("%e", &t);
+    answer = (v1*t + v2*t)+s;
+    printf("%g км\n", answer);
+    return 0;
+}
